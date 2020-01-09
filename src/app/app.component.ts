@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'platzi-store';
+  title = 'Platzi Store';
+
+  nameUser:string = '';
+
+  items = [
+    'Nicolas', 'Jualian', 'Perez'
+  ];
+
+  addItem(nameUser) {
+    this.items.push(nameUser);
+  }
+
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+  }
 }
