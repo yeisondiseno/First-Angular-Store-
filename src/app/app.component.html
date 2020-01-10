@@ -9,6 +9,30 @@
   Hola Yeison
 </div>
 
+<div *ngIf="title === 'Julian'">
+  Hola Julian
+</div>
+
+<div *ngIf="title === 'Camilo'">
+  Hola Camilo
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'Yeison'">
+    Hola Yeison
+  </p>
+  <p *ngSwitchCase="'Julian'">
+    Hola Julian
+  </p>
+  <p *ngSwitchCase="'Camilo'">
+    Hola Camilo
+  </p>
+  <p *ngSwitchDefault>
+    no hay match
+  </p>
+
+</div>
+
 <input type="text" [(ngModel)]="nameUser">
 <button (click)="addItem(nameUser)">
   add item
