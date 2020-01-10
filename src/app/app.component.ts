@@ -14,6 +14,8 @@ export class AppComponent {
     'Nicolas', 'Jualian', 'Perez'
   ];
 
+  products = [];
+
   addItem(nameUser) {
     this.items.push(nameUser);
   }
