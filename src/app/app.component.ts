@@ -10,7 +10,7 @@ import { Tproduct } from './product.model';
 export class AppComponent {
   title = 'Platzi Store';
 
-  nameUser:string = '';
+  nameUser: any = '';
 
   items = [
     'Nicolas', 'Jualian', 'Perez'
@@ -69,5 +69,10 @@ export class AppComponent {
 
   deleteItem(index: number) {
     this.items.splice(index, 1);
+  }
+
+  clickProduct(id: number) {
+    console.log('product');
+    console.log(id);
   }
 }
