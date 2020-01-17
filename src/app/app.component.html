@@ -51,7 +51,11 @@
 </ul>
 
 
-<div *ngFor="let product of products">
-  <app-product (clickAddCart)="clickProduct($event)" [product]="product"></app-product>
+<div class="product-grid">
+  <app-product 
+    (clickAddCart)="clickProduct($event)" 
+    [product]="product" 
+    *ngFor="let product of products">
+  </app-product>
 </div>
 

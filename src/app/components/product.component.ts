@@ -5,6 +5,7 @@ import { Tproduct } from '../product.model';
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss']
 })
 
 export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
@@ -32,7 +33,8 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
         console.log('4. ngDoCheck');
     }
 
-    // sirve para limpiar componentes que ya no se necesiten. 
+    // sirve para limpiar componentes que ya no se necesiten
+
     ngOnDestroy() {
         console.log('5. ngOnDestroy');
     }
