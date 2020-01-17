@@ -1,18 +1,23 @@
 
 
 <h3>
-    {{ product.title }}
+    {{ product.title | uppercase }}
 </h3>
 <img [src]="product.image" alt="">
 <hr>
 <p>
     <strong>
-        {{ product.price }}
+        {{ product.price | currency }}
     </strong>
+</p>
+<p>
+    {{ product.description | slice:0:11 }}
+</p>
+<p>
+   hora {{ today | date:'HH:mm' }}
 </p>
 <button (click)="addCart()">
     Agregar al carrito
 </button>
-
 
   
