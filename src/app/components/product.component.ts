@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 import { Tproduct } from '../product.model';
 
@@ -7,11 +7,37 @@ import { Tproduct } from '../product.model';
     templateUrl: './product.component.html',
 })
 
-export class ProductComponent {
+export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
 
 
     @Input() product: Tproduct;
     @Output() clickAddCart: EventEmitter<any> = new EventEmitter();
+
+    constructor() {
+        console.log('1. constructor');
+    }
+
+    // ngOnChanges(changes: SimpleChanges) {
+    //     console.log('2. ngOnChange');
+    //     console.log(changes);
+    // }
+
+
+    ngOnInit() {
+        console.log('3. ngOnInit');
+    }
+
+
+    ngDoCheck() {
+        console.log('4. ngDoCheck');
+    }
+
+    // sirve para limpiar componentes que ya no se necesiten. 
+    ngOnDestroy() {
+        console.log('5. ngOnDestroy');
+    }
+
+
 
     addCart() {
         console.log('añadir al carrito');
