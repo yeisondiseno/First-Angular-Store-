@@ -18,6 +18,8 @@ export class AppComponent {
 
   objeto = {};
 
+  power = 10;
+
   products: Tproduct[] = [
     {
       id: '1',
