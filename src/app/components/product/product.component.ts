@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
-import { Tproduct } from '../product.model';
+import { Tproduct } from '../../product.model';
 
 @Component({
     selector: 'app-product',
