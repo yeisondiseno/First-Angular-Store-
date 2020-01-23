@@ -4,20 +4,25 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DemoComponent} from './components/demo/demo.component';
 
 
 const routes: Routes = [
   {
-    path: '/home',
+    path: 'home',
     component: HomeComponent,
   },
   {
-    path: '/products',
+    path: 'products',
     component: ProductsComponent,
   },
   {
-    path: '/contact',
+    path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'demo',
+    component: DemoComponent,
   }
 ];
 
@@ -25,4 +30,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+
+
+ }
