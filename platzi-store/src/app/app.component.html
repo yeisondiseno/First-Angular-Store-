@@ -5,8 +5,23 @@
   Hola {{ title }}
 </div>
 
+
+<button (click)="addItem()">
+  Add item
+</button>
+
 <ul>
-  <li *ngFor=" let name of items ">
-    {{ name }} 
+  <li *ngFor=" let name of items; index as i ">
+    {{ name }} {{ i+1 }}
+    <button (click)="deleteItem(i)">
+      Delete
+    </button>
   </li>
 </ul>
+
+<div *ngFor="let product of products">
+  <h3>
+    {{ product.title }}
+  </h3>
+  <img [src]="product.image" alt="">
+</div>
