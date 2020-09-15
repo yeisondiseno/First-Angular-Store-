@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 
 import { ProductComponent } from './components/product.component';
+import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,
