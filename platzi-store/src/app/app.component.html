@@ -5,6 +5,29 @@
   Hola {{ title }}
 </div>
 
+<div *ngIf="title === 'julian'">
+  Hola {{ title }}
+</div>
+
+<div *ngIf="title === 'camilo'">
+  Hola {{ title }}
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchDefault>
+    No hay match
+  </p>
+  <p *ngSwitchCase="'nicolas'">
+    Hola nicolas
+  </p>
+  <p *ngSwitchCase="'julian'">
+    Hola julian
+  </p>
+  <p *ngSwitchCase="'camilo'">
+    Hola camilo
+  </p>
+</div>
+
 
 <button (click)="addItem()">
   Add item
