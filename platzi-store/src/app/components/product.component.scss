@@ -1,0 +1,31 @@
+@import '../../assets/styles/var.scss';
+
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc( 100% - 2.1em );
+    border: solid 1px $gray;
+    border-radius: 0.5em;
+    margin: 0.15em;
+    padding: 0.8em;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+@media ( min-width: $point-m ){
+    :host{
+        width: calc( 25% - 2.1em );
+    }
+}
+
+@media ( min-width: $point-s ) and ( max-width: $point-m ) {
+    :host{
+        width: calc( 33% - 2.1em );
+    }
+}
+
+
