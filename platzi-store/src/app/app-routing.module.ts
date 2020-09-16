@@ -7,6 +7,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
+  },
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent
   },
   {
     path: 'contact',
