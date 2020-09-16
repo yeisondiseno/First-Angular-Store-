@@ -11,6 +11,9 @@ export class AppComponent {
   title = 'Platzi Store';
 
   items = ['Nicolas', 'Yeison', 'Julian'];
+
+  power = 10;
+
   products: Product[] = [
     {
       id: '1',
@@ -63,4 +66,10 @@ export class AppComponent {
   deleteItem( index: number ) {
     this.items.splice( index, 1 );
   }
+
+
+  clickProduct( id: number ) {
+    console.log('product', id);
+  }
+
 }

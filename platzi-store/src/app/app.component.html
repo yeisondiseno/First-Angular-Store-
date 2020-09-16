@@ -1,8 +1,34 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
 
+<input type="number" [(ngModel)]="power">
+{{ power | exponential }}
+
 <div *ngIf="title === 'nicolas'">
   Hola {{ title }}
+</div>
+
+<div *ngIf="title === 'julian'">
+  Hola {{ title }}
+</div>
+
+<div *ngIf="title === 'camilo'">
+  Hola {{ title }}
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchDefault>
+    No hay match
+  </p>
+  <p *ngSwitchCase="'nicolas'">
+    Hola nicolas
+  </p>
+  <p *ngSwitchCase="'julian'">
+    Hola julian
+  </p>
+  <p *ngSwitchCase="'camilo'">
+    Hola camilo
+  </p>
 </div>
 
 
@@ -19,12 +45,11 @@
   </li>
 </ul>
 
-<div *ngFor="let product of products">
-  <h3>
-    {{ product.title }}
-  </h3>
-  <img [src]="product.image" [alt]="product.title">
-  <h4>
-    {{ product.price }}
-  </h4>
+<div class="product__grid">
+  <app-product 
+    *ngFor="let product of products" 
+    (productClicked)="clickProduct($event)" 
+    [product]="product"
+  >
+  </app-product>
 </div>
