@@ -1,0 +1,37 @@
+@import '../../../assets/styles/var.scss';
+
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+.page-not-found__number{
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: $shadow;
+}
+.page-not-found__title{
+    color: $grayBlack;
+    font-weight: bold;
+}
+.page-not-found__button{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: $white;
+    background-color: $greenLow;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: $transition;
+}
+
+.page-not-found__button:hover{
+    background-color: $greenDark;
+    transition: $transition;
+    box-shadow: $shadow;
+}

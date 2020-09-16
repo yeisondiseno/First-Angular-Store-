@@ -1,0 +1,11 @@
+@import '../../../assets/styles/var.scss';
+
+nav a {
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+nav a.active{
+    background-color: $gray;
+    color: $greenLow;
+}

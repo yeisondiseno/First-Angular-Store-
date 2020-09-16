@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import './assets/styles/normalize.css';
 @import './assets/styles/var.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
 .product__grid{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
 }
