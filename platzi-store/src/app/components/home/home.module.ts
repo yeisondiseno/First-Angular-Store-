@@ -5,6 +5,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 import { from } from 'rxjs';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { from } from 'rxjs';
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        SharedModule
     ]
 })
 
