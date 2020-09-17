@@ -6,7 +6,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   templateUrl: './banner.component.html',
   styleUrls: [
     './banner.component.scss',
-    '../../../../node_modules/swiper/swiper-bundle.css'
+    '../../../../../../node_modules/swiper/swiper-bundle.css'
   ]
 })
 export class BannerComponent implements OnInit {

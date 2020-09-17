@@ -1,48 +1,59 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { from } from 'rxjs';
 
-import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { HomeModule } from './components/home/home.module';
+// import {} from './'
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
-  },
-  {
-    path: 'products/:id',
-    component: ProductDetailComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        // component: HomeComponent
+        loadChildren: () => import('./components/home/home.module').then(m => HomeModule)
+      },
+      {
+        path: 'products',
+        component: ProductsComponent
+      },
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent
+      }
+    ]
   },
   {
     path: 'demo',
     component: DemoComponent
   },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
