@@ -4,33 +4,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc( 100% - 2.1em );
-    border: solid 1px $gray;
-    border-radius: 0.5em;
+    width: calc( 100% - 0.3em );
     margin: 0.15em;
-    padding: 0.8em;
 }
 
-img{
-    width: auto;
-    max-width: 100%;
-    max-height: 270px;
+.crop__image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+    }
 }
 
-h4{
-    margin-top: auto;
-}
 
+button{
+    width: 100%;
+    margin-top: 0.5em !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
 
 @media ( min-width: $point-m ){
     :host{
-        width: calc( 25% - 2.1em );
+        width: calc( 25% - 0.3em );
     }
 }
 
 @media ( min-width: $point-s ) and ( max-width: $point-m ) {
     :host{
-        width: calc( 33% - 2.1em );
+        width: calc( 33% - 0.3em );
     }
 }
 

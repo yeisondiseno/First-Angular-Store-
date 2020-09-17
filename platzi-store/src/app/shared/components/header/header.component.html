@@ -1,11 +1,19 @@
-<nav>
-    <a routerLink="/home" routerLinkActive="active">
-        Home
-    </a>
-    <a routerLink="/products" routerLinkActive="active">
-        Productos
-    </a>
-    <a routerLink="/contact" routerLinkActive="active">
-        Contacto
-    </a>
-</nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <nav>
+            <a mat-button routerLink="/home" routerLinkActive="active">
+                Home
+            </a>
+            <a mat-button routerLink="/products" routerLinkActive="active">
+                Productos
+            </a>
+            <a mat-button routerLink="/contact" routerLinkActive="active">
+                Contacto
+            </a>
+        </nav>
+        <button mat-raised-button matBadge="4" matBadgeColor="accent">
+            Carrito
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
