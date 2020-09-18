@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 
 import { ProductsService } from '../../../../core/services/products.service';
 import { Product } from '../../../../product.model';
@@ -46,6 +46,25 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.createProduct(newProduct)
     .subscribe(product => {
       console.log(product);
+    });
+  }
+
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      title: 'Nuevo desde angular modificado',
+      price: 30000,
+      description: 'Esta es una descripción modificada'
+    };
+    this.productsService.updateProduct( '222', updateProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+  }
+
+  deleteProduct() {
+    this.productsService.deleteProduct('222')
+    .subscribe(rta => {
+      console.log(rta);
     });
   }
 

@@ -3,8 +3,6 @@ import {
     Input,
     Output,
     EventEmitter,
-    OnChanges,
-    SimpleChanges,
     OnInit,
     DoCheck,
     OnDestroy
@@ -15,7 +13,7 @@ import { Product } from '../../../../product.model';
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
-    styleUrls: ['/product.component.scss']
+    styleUrls: ['./product.component.scss'],
 })
 
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
