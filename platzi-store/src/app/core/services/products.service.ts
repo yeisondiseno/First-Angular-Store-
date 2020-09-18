@@ -23,4 +23,11 @@ export class ProductsService {
     return this.http.get<Product>(`${environment.url_api}/products/${id}`);
   }
 
+  createProduct(product: Product) {
+    return this.http.post(
+      `${environment.url_api}/products`,
+      product
+    );
+  }
+
 }

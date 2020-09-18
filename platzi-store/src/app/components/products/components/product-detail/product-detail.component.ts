@@ -34,4 +34,19 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  createProduct() {
+    const newProduct: Product = {
+      id: '222',
+      title: 'Nuevo desde angular',
+      // tslint:disable-next-line: max-line-length
+      image: 'https://images.unsplash.com/photo-1600376646622-dab45268282b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80',
+      price: 90000,
+      description: 'Esta es una descripción'
+    };
+    this.productsService.createProduct(newProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+  }
+
 }
