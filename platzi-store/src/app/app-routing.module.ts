@@ -9,6 +9,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { HomeModule } from './components/home/home.module';
 import { ProductsModule } from './components/products/products.module';
 import { ContactModule } from './components/contact/contact.module';
+import { AdminModule } from './components/admin/admin.module';
 
 import { AdminGuard } from './admin.guard';
 // import {} from './'
@@ -43,10 +44,6 @@ const routes: Routes = [
         canActivate: [AdminGuard],
         // component: ContactComponent
         loadChildren: () => import('./components/contact/contact.module').then(m => ContactModule)
-      },
-      {
-        path: '**',
-        component: PageNotFoundComponent
       }
     ]
   },
@@ -54,6 +51,16 @@ const routes: Routes = [
     path: 'demo',
     component: DemoComponent
   },
+  {
+    path: 'admin',
+    // canActivate: [AdminGuard],
+    // component: ContactComponent
+    loadChildren: () => import('./components/admin/admin.module').then(m => AdminModule)
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({

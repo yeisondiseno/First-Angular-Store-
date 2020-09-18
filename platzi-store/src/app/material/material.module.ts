@@ -7,8 +7,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-
 
 @NgModule({
   declarations: [],
@@ -19,7 +21,10 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   imports: [
     CommonModule,
@@ -29,7 +34,10 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
