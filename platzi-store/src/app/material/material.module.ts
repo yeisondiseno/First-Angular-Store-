@@ -11,6 +11,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [],
@@ -24,7 +32,13 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
   ],
   imports: [
     CommonModule,
@@ -37,7 +51,13 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }
