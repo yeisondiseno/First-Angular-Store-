@@ -1,16 +1,49 @@
-<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="form" novalidate (ngSubmit)="saveProduct($event)">
   <mat-card class="shipping-card">
-    <mat-form-field>
-      <input formControlName="id" matInput type="text">
-    </mat-form-field>
-    <mat-form-field>
-      <input formControlName="title" matInput type="text">
-    </mat-form-field>
-    <mat-form-field>
-      <input formControlName="price" matInput type="number">
-    </mat-form-field>
-    <mat-form-field>
-      <input formControlName="description" matInput type="text">
-    </mat-form-field>
+    <mat-card-header>
+      Producto
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field class="full-width">
+            <mat-label>
+              Ingrese el ID
+            </mat-label>
+            <input placeholder="id" formControlName="id" matInput type="text">
+          </mat-form-field>
+        </div>
+        <div class="col-xs">
+          <mat-form-field class="full-width">
+            <mat-label>
+              Ingrese el título
+            </mat-label>
+            <input placeholder="title" formControlName="title" matInput type="text">
+          </mat-form-field>
+        </div>
+        <div class="col-xs">
+          <mat-form-field class="full-width">
+            <mat-label>
+              Ingrese el valor del producto
+            </mat-label>
+            <input placeholder="price" formControlName="price" matInput type="number">
+          </mat-form-field>
+        </div>
+        <div class="col-xs">
+          <mat-form-field class="full-width">
+            <mat-label>
+              Ingrese la descripción del producto
+            </mat-label>
+            <textarea matInput placeholder="description" formControlName="description"></textarea>
+            <!-- <input formControlName="description" matInput type="text"> -->
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">
+        Crear producto
+      </button>
+    </mat-card-actions>
   </mat-card>
 </form>

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { ProductsService } from '../../../../core/services/products.service';
 
 @Component({
   selector: 'app-product-form',
@@ -12,12 +15,23 @@ export class ProductFormComponent {
 
   constructor(
     private formBuilder: FormBuilder,
+    private productsService: ProductsService,
+    private router: Router
     ) {
       this.buildForm();
-    }
+  }
 
-  onSubmit() {
-    alert('Thanks!');
+  saveProduct(event: Event) {
+    event.preventDefault();
+    console.log(this.form.value);
+    if ( this.form.valid ) {
+      const product = this.form.value;
+      this.productsService.createProduct(product)
+      .subscribe( (newProduct) => {
+        console.log(newProduct);
+        this.router.navigate(['admin/listproducts']);
+      });
+    }
   }
 
   private buildForm() {
