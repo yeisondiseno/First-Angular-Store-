@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -17,6 +18,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -38,7 +40,9 @@ import { MatListModule } from '@angular/material/list';
     MatSortModule,
     MatMenuModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    LayoutModule,
+    ReactiveFormsModule
   ],
   imports: [
     CommonModule,
@@ -57,7 +61,9 @@ import { MatListModule } from '@angular/material/list';
     MatSortModule,
     MatMenuModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    LayoutModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialModule { }
