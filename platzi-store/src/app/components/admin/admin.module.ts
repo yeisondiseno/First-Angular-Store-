@@ -7,7 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { MaterialModule } from '../../material/material.module';
-import { ProductsComponent } from './components/products/products.component';
+import { ProductFormEditComponent } from './components/product-form-edit/product-form-edit.component';
 
 
 
@@ -17,7 +17,7 @@ import { ProductsComponent } from './components/products/products.component';
     NavComponent,
     DashboardComponent,
     ListProductsComponent,
-    ProductsComponent
+    ProductFormEditComponent,
   ],
   imports: [
     CommonModule,
