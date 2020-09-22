@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import './assets/styles/normalize.css';
 @import './assets/styles/var.scss';
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
 .product__grid{
     display: flex;
@@ -9,6 +17,27 @@
     flex-wrap: wrap;
 }
 
-body{
-    font-family: 'Kumbh Sans', sans-serif;
+.container__layout{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .container__layout--cont{
+        margin: 1em;
+    }
+}
+
+
+@media ( min-width: $point-s ){
+    .container__layout{
+        max-width: $point-xl;
+        .container__layout--cont{
+            margin: 0.5em;
+        }
+    }
+}
+
+@media ( min-width: $point-l ){
+    .container__layout{
+        // padding: 0.5em 0;
+    }
 }

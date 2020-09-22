@@ -1,1 +1,21 @@
 // @import '../../../../node_modules/swiper/swiper-bundle.css';
+@import '../../../../../assets/styles/var.scss';
+
+:host{
+    display: flex;
+    margin-top: -1em;
+    margin-left: -1em;
+    width: calc( 100% + 2em );
+    img{
+        width: 100%;
+    }
+}
+
+@media ( min-width: $point-s ){
+    :host{
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+        width: calc( 100% + 1em );
+    }
+
+}

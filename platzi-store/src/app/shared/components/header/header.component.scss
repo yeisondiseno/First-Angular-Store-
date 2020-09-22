@@ -1,11 +1,22 @@
 @import '../../../../assets/styles/var.scss';
 
 nav a {
-    padding: 0.5em;
-    text-decoration: none;
+    margin-right: 0.8em;
 }
 
 nav a.active{
-    background-color: $gray;
-    color: $greenLow;
+    background-color: $white;
+    color: $indigo;
+}
+
+// button{
+//     margin-left: auto;
+// }
+
+mat-toolbar-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    width: 100%;
 }

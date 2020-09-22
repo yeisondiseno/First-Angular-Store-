@@ -7,7 +7,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductsRoutingModule } from './produts-routing.module';
 import { from } from 'rxjs';
 
-
+import { MaterialModule } from '../../material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { from } from 'rxjs';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    MaterialModule
   ]
 })
 export class ProductsModule { }
