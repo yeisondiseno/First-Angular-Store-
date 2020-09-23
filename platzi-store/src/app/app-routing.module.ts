@@ -10,7 +10,8 @@ import { HomeModule } from './components/home/home.module';
 import { ProductsModule } from './components/products/products.module';
 import { ContactModule } from './components/contact/contact.module';
 import { AdminModule } from './components/admin/admin.module';
-import { OrderModule } from './components/order/order.module'; 
+import { OrderModule } from './components/order/order.module';
+import { AuthModule } from './components/auth/auth.module';
 
 import { AdminGuard } from './admin.guard';
 // import {} from './'
@@ -61,6 +62,10 @@ const routes: Routes = [
     // canActivate: [AdminGuard],
     // component: ContactComponent
     loadChildren: () => import('./components/admin/admin.module').then(m => AdminModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./components/auth/auth.module').then( m => AuthModule )
   },
   {
     path: '**',

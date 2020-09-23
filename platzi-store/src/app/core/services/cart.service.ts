@@ -20,6 +20,7 @@ export class CartService {
     this.products = [...this.products, product];
     this.cart.next(this.products);
   }
+
   deleteCart(id: string) {
     const index = this.products.findIndex((product) => product.id === id);
     this.products.splice( index, 1 );

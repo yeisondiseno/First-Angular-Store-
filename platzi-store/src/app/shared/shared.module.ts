@@ -9,19 +9,22 @@ import { HighlightDirective } from './directive/highlight/highlight.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material/material.module';
+import { RepeatProductPipe } from './pipes/repeated-product/repeated-product.pipe';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    RepeatProductPipe
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    RepeatProductPipe
   ],
   imports: [
     CommonModule,
