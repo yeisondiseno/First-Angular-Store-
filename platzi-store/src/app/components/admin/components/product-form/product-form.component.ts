@@ -40,12 +40,12 @@ export class ProductFormComponent {
       id: ['', [Validators.required]],
       title: ['', [Validators.required]],
       price: ['', [Validators.required, MyValidators.isPriceValid]],
-      image: '',
+      image: [''],
       description: ''
     });
   }
 
-//tomar el fomulario y ponerla como formulario variable 
+// tomar el fomulario y ponerla como formulario variable
   get priceField() {
     return this.form.get('price');
   }

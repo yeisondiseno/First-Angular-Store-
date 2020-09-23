@@ -22,7 +22,18 @@
                 </div>
                 </mat-card-content>
                 <mat-card-actions>
-                <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Registro</button>
+                    <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">
+                        Registro
+                    </button>
+                    <div class="return--buttons">
+                        <a mat-button routerLink="/">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            Regresa al Inicio
+                        </a>
+                        <a mat-button routerLink="/auth/login">
+                            login
+                        </a>
+                    </div>
                 </mat-card-actions>
             </mat-card>
         </form>

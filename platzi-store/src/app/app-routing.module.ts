@@ -43,7 +43,6 @@ const routes: Routes = [
       // },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         // component: ContactComponent
         loadChildren: () => import('./components/contact/contact.module').then( m => ContactModule )
       },
@@ -59,7 +58,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    // canActivate: [AdminGuard],
+    canActivate: [AdminGuard],
     // component: ContactComponent
     loadChildren: () => import('./components/admin/admin.module').then(m => AdminModule)
   },
