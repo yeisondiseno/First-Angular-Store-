@@ -10,6 +10,7 @@ import { HomeModule } from './components/home/home.module';
 import { ProductsModule } from './components/products/products.module';
 import { ContactModule } from './components/contact/contact.module';
 import { AdminModule } from './components/admin/admin.module';
+import { OrderModule } from './components/order/order.module'; 
 
 import { AdminGuard } from './admin.guard';
 // import {} from './'
@@ -43,7 +44,11 @@ const routes: Routes = [
         path: 'contact',
         canActivate: [AdminGuard],
         // component: ContactComponent
-        loadChildren: () => import('./components/contact/contact.module').then(m => ContactModule)
+        loadChildren: () => import('./components/contact/contact.module').then( m => ContactModule )
+      },
+      {
+        path: 'order',
+        loadChildren: () => import('./components/order/order.module').then( m => OrderModule )
       }
     ]
   },
