@@ -10,7 +10,7 @@ import { ProductsService } from '../../../../core/services/products.service';
   templateUrl: './product-form-edit.component.html',
   styleUrls: ['./product-form-edit.component.scss']
 })
-export class ProductFormEditComponent implements OnInit {
+export class ProductFormEditComponent {
 
   form: FormGroup;
   id: string;

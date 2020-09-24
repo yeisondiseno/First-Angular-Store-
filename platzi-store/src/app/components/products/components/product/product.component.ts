@@ -10,6 +10,8 @@ import {
 
 import { Product } from '../../../../product.model';
 
+import { CartService } from '../../../../core/services/cart.service';
+
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
@@ -20,7 +22,9 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
     @Input() product: Product;
     @Output() productClicked = new EventEmitter<any>();
 
-    constructor() {
+    constructor(
+        private cartService: CartService
+    ) {
         console.log('constructor');
     }
 
@@ -43,6 +47,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
     addCart() {
         console.log('Agregado al carro');
-        this.productClicked.emit(this.product.id);
+        // this.productClicked.emit(this.product.id);
+        this.cartService.addCart(this.product);
     }
 }

@@ -8,8 +8,11 @@
       <a mat-list-item routerLink="/home">Regresar al Home</a>
       <!-- <a mat-list-item routerLink="/admin/create">Crear Producto</a> -->
       <a mat-list-item routerLink="/admin/dashboard">Dashboard</a>
-      <a mat-list-item routerLink="/admin/products">Productos</a>
+      <!-- <a mat-list-item routerLink="/admin/products">Productos</a> -->
       <a mat-list-item routerLink="/admin/listproducts">Lista de productos</a>
+      <button  class="login-out-btn" mat-raised-button color="primary" (click)="loginOut()" >
+        Cerrar sesión
+      </button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

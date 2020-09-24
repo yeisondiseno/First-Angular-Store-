@@ -46,6 +46,11 @@
             <!-- <input formControlName="description" matInput type="text"> -->
           </mat-form-field>
         </div>
+        <div class="col-xs">
+          <!-- Ingrese la descripción del producto -->
+          <img class="img__upload" *ngIf="(image$ | async) as image" [src]="image" alt="">
+          <input type="file" (change)="uploadFile($event)">
+        </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
